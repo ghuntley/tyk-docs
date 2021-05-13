@@ -1,7 +1,7 @@
 ---
 date: 2017-03-24T17:18:28Z
-title: Customise Pages with CSS and JS
-linktitle: Customise Pages CSS and JS
+title: Customise Pages with CSS and JavaScript
+linktitle: Customise Pages with CSS and JS
 menu:
   main:
     parent: "Customise"
@@ -71,7 +71,7 @@ curl -X PUT http://tyk-dashboard.com/api/portal/css \
  [1]: /docs/img/dashboard/portal-management/portal_man_css.png
  [2]: /docs/img/dashboard/portal-management/portal_site_css.png
 
- ### Updating JS via API
+ ### Updating JavaScript via API
 
  In order to initialize the portal JS object in the database use the following request where `console.log(1)` should be replaced by your JS snippet:
 
@@ -120,4 +120,4 @@ Response:
 }
 ```
 
-The JS snippet that's added through this endpoint is injected at the bottom of the portal page using a `<script>` tag.
+The JavaScript snippet that's added through this endpoint is injected at the bottom of the portal page using a `<script>` tag.
