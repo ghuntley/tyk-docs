@@ -497,9 +497,9 @@ authorization:7a7b140f-2480-4d5a-4e78-24049e3ba7f8
 }
 ```
 
-## JS
+## JavaScript
 
-### List Portal JS
+### List Portal JavaScript
 
 | **Property** | **Description**          |
 | ------------ | ------------------------ |
@@ -527,7 +527,7 @@ authorization:7a7b140f-2480-4d5a-4e78-24049e3ba7f8
 }
 ```
 
-### Create Portal JS
+### Create Portal JavaScript
 
 | **Property** | **Description**          |
 | ------------ | ------------------------ |
