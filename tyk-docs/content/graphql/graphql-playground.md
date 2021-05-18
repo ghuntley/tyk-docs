@@ -23,7 +23,7 @@ The GraphiQL try-out playground comes with a series of features by default, whic
   10. Supports full GraphQL Language Specification:
   11. Queries, Mutations, Subscriptions, Fragments, Unions, directives, multiple operations per query, etc
 
-![Playground](/docs/img/dashboard/udg/getting-started/playground.png)
+  {{< img src="/img/dashboard/udg/getting-started/playground.png" alt="Playground" >}}
 
   **Headers**
 
