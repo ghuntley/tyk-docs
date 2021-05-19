@@ -36,7 +36,7 @@ Click the APIs menu item and then click **Add New API**.
 {{< warning success >}}
 **Warning**
   
-Ensure you configure a valid API Listen path.  Root ("/") listen paths are not supported on Tyk Cloud.
+Ensure you configure a valid API Listen path.  Root ("/") listen paths are **not** supported on Tyk Cloud deployments prior to version v3.2.0.
 {{< /warning >}}
 
 ## Step Four - Advanced Options
