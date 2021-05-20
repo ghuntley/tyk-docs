@@ -1,6 +1,6 @@
 ---
 date: 2021-03-22T10:00:00Z
-title: Dynamic Client Registration using Okta
+title: Step by step guide using Okta
 menu:
   main:
     parent: "Dynamic Client Registration"
