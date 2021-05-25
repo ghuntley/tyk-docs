@@ -141,15 +141,18 @@ When you modify the `dashboard.opa` file, you will need to restart your tyk Dash
 
 ### Using the Open Policy Agent in the Dashboard
 
-As well as configuring OPA rules through the API, admin users can view and edit OPA rules from within the Tyk Dashboard. The advantage of configuring your OPA rules in the Dashboard is that the format is (what the language is or the format compared to the API? Why is it more readable?), and there are two ways you can do this.
+As well as configuring OPA rules through the API, admin users can view and edit OPA rules from within the Tyk Dashboard. The advantage of configuring your OPA rules in the Dashboard is that the format is The advantage of configuring your OPA rules in the Dashboard is that you can use a code editor for it, emulating a proper developer experience. There are two ways you can do this:
 
-Open Policy Agent Rules page: In the side navigation under Dashboard Management, there is a page called OPA Rules. Here you can view and make any changes and choose whether your OPA rules should be enabled or disabled. 
-Developer Tools: Using the keyboard shortcut CMD+SHIFT+D (or CTRL+SHIFT+D for PC), you can open the Developer Tools panel on any page in the dashboard and configure the permissions, seeing them come into effect straight away.  
+1. From the **OPA Rules menu**. From the Dashboard Management menu, select OPA Rules. You can view and make any changes and select whether your OPA rules should be enabled or disabled.
+
+{{< img src="/img/dashboard/system-management/opa-rules-menu.png" alt="OPA Rules Menu" >}}
+
+2. From **Developer Tools**. Using the keyboard shortcut `CMD+SHIFT+D` (or `CTRL+SHIFT+D` for PC), you can open the Developer Tools panel on any page in the Dashboard and configure the permissions. Updates are applied in real-time.  
 
 {{< note success >}}
 **Note**  
 
-OPA rules can only be accessed by admin users in the dashboard.
+OPA rules can only be accessed by admin role users in the Dashboard.
 {{< /note >}}
 
 ![OPA Floating UI](/docs/img/2.10/opa-floating.png)
