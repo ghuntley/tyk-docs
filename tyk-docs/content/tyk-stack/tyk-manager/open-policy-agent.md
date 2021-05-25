@@ -27,6 +27,19 @@ You can control OPA functionality on global level via configuration file or per 
 |   security.open_policy.enable_api   	|   boolean     	|   Enable access to the OPA API, even for users with Admin role                                                         	|   false                     	|
 |   security.additional_permissions   	|   string map  	|   Add custom user/user_group permissions. You can use them in your rules, and they will be displayed in the Dashboard  	|   `{"key": "human name"}`   	|
 
+### Example
+
+```{copy.Wrapper}
+"security": {
+	"open_policy": {
+		"enabled":true,
+		"debug": true,
+		"enable_api": true
+	},
+	"additional_permissions": {}
+}
+```
+
 
 With the OPA turned on, the majority of the security rules will be dynamically evaluated based on these rules.
 
