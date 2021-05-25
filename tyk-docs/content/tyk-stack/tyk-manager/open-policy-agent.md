@@ -18,14 +18,14 @@ OPA rule engine put on top of Dashboard API, which means you can control the beh
 ### Configuration
 
 By default Dashboard OPA engine is turned off, and you need to explicitly enable it via configuration file.
-You can control OPA functionality on global level via configuration file or per organisation level using either the [OPA API](/docs/tyk-dashboard-api/org/permissions/) or the [Dashboard](#using-the-open-policy-agent-in-the-dashboard).
+You can control OPA functionality on global level via configuration file or per organisation level using either the [OPA API](/docs/tyk-dashboard-api/org/opa/) or the [Dashboard](#using-the-open-policy-agent-in-the-dashboard).
 
-| Key                             | Type       | Description                                                                                              | Example                 |
-| -------------------------------------- | ---------- | -------------------------------------------------------------------------------------------------------- | ----------------------- |
-| security.open_policy.enabled           | boolean    | Toggle support for OPA                                                                            | false                   |
-| security.open_policy.debug             | boolean    | Enable debugging mode, prints a lot of information to the console                                        | false                   |
-| security.open_policy.enable_api        | boolean    | Enable access to the OPA API, even for users with Admin role                                           | false
-| security.additional_permissions        | string map | Add custom user/user_group permissions. You can use them in your rules, and they will be displayed on UI | `{"key": "human name"}` |
+|   Key                               	|   Type        	|   Description                                                                                                          	|   Example                   	|
+|-------------------------------------	|---------------	|------------------------------------------------------------------------------------------------------------------------	|-----------------------------	|
+|   security.open_policy.enabled      	|   boolean     	|   Toggle support for OPA                                                                                               	|   false                     	|
+|   security.open_policy.debug        	|   boolean     	|   Enable debugging mode, prints a lot of information to the console                                                    	|   false                     	|
+|   security.open_policy.enable_api   	|   boolean     	|   Enable access to the OPA API, even for users with Admin role                                                         	|   false                     	|
+|   security.additional_permissions   	|   string map  	|   Add custom user/user_group permissions. You can use them in your rules, and they will be displayed in the Dashboard  	|   `{"key": "human name"}`   	|
 
 
 With the OPA turned on, the majority of the security rules will be dynamically evaluated based on these rules.

@@ -1,6 +1,6 @@
 ---
 date: 2017-03-27T12:13:12+01:00
-title: Additional Permissions
+title: Additional Permissions API
 menu:
   main:
     parent: "Tyk Dashboard API"
