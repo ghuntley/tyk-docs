@@ -4,9 +4,9 @@ tags: ["Tyk Stack", "Self-Managed", "Installation", "Istion"]
 description: "How to install the Tyk Stack for Istio on Kubernetes"
 menu:
   main:
-    parent: "Installation"
+    parent: "With Helm Chart on Kubernetes"
 weight: 7
-url: "/tyk-on-premises/istio/"
+url: "/tyk-self-managed/helm/istio/"
 ---
 
 
