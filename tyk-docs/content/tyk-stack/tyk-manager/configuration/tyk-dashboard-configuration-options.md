@@ -648,6 +648,7 @@ Set to `false` by default, this option toggles debug mode for when Open Policy A
 
 #### security.additional_permissions
 Through this options, you can provide a list of additional permissions, that can be applief for existing or newly created users or user groups.
+Structure is `{"key": "human name"}`
 
 Example:
 
