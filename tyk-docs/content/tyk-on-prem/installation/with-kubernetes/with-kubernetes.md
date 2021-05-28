@@ -106,13 +106,16 @@ Follow the instructions in the Notes that follow the installation to find your T
 ### Tyk Developer Portal
 
 Once the Tyk Stack is up and running, take the following steps in order to bootstrap the Tyk Developer Portal:
-1. Set the portal domain via the Dashboard UI
+1. Set the portal domain from the **Your Developer Portal > SET YOUR PORTAL DOMAIN** menu
+
+{{< img src="/img/dashboard/portal-management/set-portal-domain.png" alt="Set Portal Domain" >}}
+
 2. Restart the Dashboard containers
 3. Create a Default home page from the **Portal Management > Pages** menu
 
 ## Install Tyk Hybrid Gateways (This can be used either for Hybrid Gateways connected to Tyk Cloud or MDCB Hybrid Gateways)
 
-To install, *first modify `values.yaml` file inside tyk-hybrid chart as follows:*
+To install, first modify `values.yaml` file inside your tyk-hybrid chart as follows:
 1. Add your dashboard users organisation ID in `gateway.rpc.rpcKey` value
 2. Add your dashboard users API key in `gateway.rpc.apiKey` value
 3. Add your connection string to allow the Hybrid gateway to connect to your control plane in `gateway.rpc.connString`. On the Tyk Cloud Console find this value in the endpoints panel for your control plane deployment.
@@ -140,9 +143,9 @@ This chart implies there's a ConfigMap with a `profiles.json` definition in it. 
 
 ## Installing MDCB
 
-If you are deploying the Master Data Centre in an MDCB deployment then you can enable to addition of that component in your installation. For more details about the MDCB component see here https://tyk.io/docs/tyk-multi-data-centre/
+If you are deploying the Master Data Centre then you can enable the addition of that component in your installation. For more details about the MDCB component see [here](https://tyk.io/docs/tyk-multi-data-centre/)
 
-This enables multicluster, multi Data-Centre API management from a single Dashboard.
+This enables a multicluster, multi Data-Centre API management from a single Tyk Dashboard.
 
 **Secrets**
 
@@ -152,7 +155,7 @@ The Tyk owned MDCB registry is private and requires adding users to your organis
 
 ## Caveat: Tyk license and the number of Gateway nodes
 
-Different Tyk Pro Licenses allow for different numbers of Gateway nodes to connect to a single Dashboard instance - ensure that your Gateway pods will not scale beyond this number by setting the gateway resource kind to `Deployment` and setting the replica count to the node limit. For example, use the following options for a single node license: `--set gateway.kind=Deployment --set gateway.replicaCount=1` or similar if modifying the `values.yaml`.
+Different Tyk Pro Licenses allow for different numbers of Gateway nodes to connect to a single Dashboard instance - ensure that your Gateway pods will not scale beyond this number by setting the gateway resource kind to `Deployment` and setting the replica count to your node limit. For example, use the following options for a single node license: `--set gateway.kind=Deployment --set gateway.replicaCount=1` or similar if modifying the `values.yaml`.
 
 Note, however, there may be intermittent issues on the new pods during the rolling update process, when the total number of online gateway pods is more than the license limit with lower amounts of Licensed nodes.
 
@@ -187,10 +190,4 @@ Our new Tyk Kubernetes Operator succeeds the Ingress controller and will be the 
 
 {{< /note >}}
 
-We provide a Kubernetes Operator that enables Tyk to be used for managing Api Definitions (including K8s Ingress), security policies and other Tyk features. The operator code and get started guide can be found in our GitHub repository:
-
-https://github.com/TykTechnologies/tyk-operator
-
-## Installing Tyk on Kubernetes Manually
-
-We have an [archived GitHub repo](https://github.com/TykTechnologies/tyk-kubernetes) That details installing Tyk on Kubernetes manually. Feel free to try this method, but it has been superseeded by our Helm Chart and Tyk Operator offering.
+We provide a Kubernetes Operator that enables Tyk to be used for managing Api Definitions (including K8s Ingress), security policies and other Tyk features. The operator code and get started guide can be found in our [GitHub repository](https://github.com/TykTechnologies/tyk-operator)

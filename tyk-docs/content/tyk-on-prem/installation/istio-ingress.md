@@ -21,7 +21,7 @@ Each Tyk Ingress Gateway will have a sidecar that intercepts the traffic on the 
 A Kubernetes cluster and Kubectl. 
 
 Optional but recommended:
-[Tyk Operator](https://github.com/TykTechnologies/tyk-operator) for managing our API management resources in the gateway (API Definitions and Security Policies) and for managing Ingress and TLS Certifications for the Ingress using Certmanager if required. This guide includes declaratively deploying an API with the Operator once you have Tyk installed as our Istio Ingress.
+[Tyk Operator](https://github.com/TykTechnologies/tyk-operator) for managing our API management resources in your Tyk Gateway (API Definitions and Security Policies) and for managing Ingress and TLS Certifications for the Ingress using Certmanager if required. This guide includes declaratively deploying an API with the Operator once you have Tyk installed as our Istio Ingress.
 
 Istioctl command line tool on your machine.
 
@@ -68,7 +68,7 @@ followed by
 kubectl label namespace tyk istio-injection=enabled
 ```
 
-Install the Tyk setup of your choice from Tyk's Helm charts [on our GitHub pages]( https://github.com/TykTechnologies/tyk-helm-chart). This guide assumes the use of the quickstart Tyk Pro installation.
+Install the Tyk setup of your choice from Tyk's Helm charts [on our GitHub pages](https://github.com/TykTechnologies/tyk-helm-chart). This guide assumes the use of the quickstart Tyk Pro installation.
 
 From the tyk-helm-chart repo folder:
 
