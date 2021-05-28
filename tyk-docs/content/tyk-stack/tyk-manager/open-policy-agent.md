@@ -17,7 +17,7 @@ OPA rule engine put on top of Dashboard API, which means you can control the beh
 
 ### Configuration
 
-By default Dashboard OPA engine is turned off, and you need to explicitly enable it via configuration file.
+By default the Dashboard OPA engine is turned off, and you need to explicitly enable it via your configuration file.
 You can control OPA functionality on global level via configuration file or per organisation level using either the [OPA API](/docs/tyk-dashboard-api/org/opa/) or the [Dashboard](#using-the-open-policy-agent-in-the-dashboard).
 
 |   Key                               	|   Type        	|   Description                                                                                                          	|   Example                   	|
