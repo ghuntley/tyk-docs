@@ -647,8 +647,8 @@ Set to `true` by default, this option enables usage and evaluation of Open Polic
 Set to `false` by default, this option toggles debug mode for when Open Policy Agent (OPA) rules are running. Helpful for on-prem users.
 
 #### security.additional_permissions
-Through this options, you can provide a list of additional permissions, that can be applief for existing or newly created users or user groups.
-Structure is `{"key": "human name"}`
+This option allows you to add additional user permissions that can be applied to existing or newly created users or user groups.
+The structure is `{"key": "human name"}`
 
 Example:
 
