@@ -1,17 +1,17 @@
 ---
-title: Open Policy Agent
+title: Open Policy Agent (OPA)
 menu:
   main:
     parent: "Tyk Dashboard"
 url: "/tyk-dashboard/open-policy-agent"
 ---
 
-The Tyk Dashboard permission system can be extended by writing custom rules using an Open Policy Agent (OPA). The rule engine works on top of your Dashboard API, which means you can control not only access rules, but also behaviour of all Dashboard APIs (except your public developer portal).
+The Tyk Dashboard permission system can be extended by writing custom rules using an Open Policy Agent (OPA). The rules engine works on top of your Dashboard API, which means you can control not only access rules, but also behaviour of all Dashboard APIs (except your public developer portal).
 
 To give you some inspiration here are some ideas of the rules you can implement now:
 
-* Enforce HTTP proxy option for all APIs which target URL does not point to the internal domain
-* Control access for individual fields. For example, do not allow change API "active" status (e.g. deploy), unless you have a specific permission set (and make new permission be available to the UI/API). Custom permissions can be creating using the [Additional Permissions API](/docs/tyk-dashboard-api/org/permissions/)
+* Enforce HTTP proxy option for all APIs for which the target URL does not point at the internal domain
+* Control access for individual fields. For example, do not allow changing the API "active" status (e.g. deploy), unless you have a specific permission set (and make new permissions to be available to the Dashboard/API). Custom permissions can be creating using the [Additional Permissions API](/docs/tyk-dashboard-api/org/permissions/)
 * Have a user(or group) which has read access to one APIs and write to another
 OPA rule engine put on top of Dashboard API, which means you can control the behavior of all APIs (except public developer portal)
 
