@@ -1,7 +1,7 @@
 ---
 title: "Tyk API Management"
 date: 2020-06-24
-weight: 4
+weight: 3
 menu: "main"
 url: "/apim/"
 linkTitle: API Management
