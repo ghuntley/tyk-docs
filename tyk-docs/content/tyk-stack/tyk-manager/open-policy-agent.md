@@ -17,8 +17,8 @@ OPA rule engine put on top of Dashboard API, which means you can control the beh
 
 ### Configuration
 
-By default the Dashboard OPA engine is turned off, and you need to explicitly enable it via your configuration file.
-You can control OPA functionality on global level via configuration file or per organisation level using either the [OPA API](/docs/tyk-dashboard-api/org/opa/) or the [Dashboard](#using-the-open-policy-agent-in-the-dashboard).
+By default the Dashboard OPA engine is turned off, and you need to explicitly enable it via your Dashboard `tyk_analytics.conf` file.
+You can then control OPA functionality on a global level via your `tyk_analytics.conf` file, or at an organisation level using either the [OPA API](/docs/tyk-dashboard-api/org/opa/) or the [Dashboard](#using-the-open-policy-agent-in-the-dashboard).
 
 |   Key                               	|   Type        	|   Description                                                                                                          	|   Example                   	|
 |-------------------------------------	|---------------	|------------------------------------------------------------------------------------------------------------------------	|-----------------------------	|
@@ -47,7 +47,7 @@ Additionally, users can modify OPA rules, and define their own, through the [OPA
 Moreover, using these rules you can also modify request content. Our recommendation is to use those modifications in a development environment and remember to create a backup of the rego rules.
 
 ### Language intro
-The Open Policy Agent (OPA, pronounced “oh-pa”) is an open source, general-purpose policy engine that unifies policy enforcement across the stack. OPA provides a high-level declarative language (Rego) that lets you specify policy as code and simple APIs to offload policy decision-making from your software. (source: https://www.openpolicyagent.org/docs/latest/)
+The Open Policy Agent (OPA) is an open source, general-purpose policy engine that unifies policy enforcement across the stack. OPA provides a high-level declarative language (Rego) that lets you specify policy as code and simple APIs to offload policy decision-making from your software. (source: https://www.openpolicyagent.org/docs/latest/)
 
 ### What is Rego?
 OPA policies are expressed in a high-level declarative language called Rego. Rego (pronounced “ray-go”) is purpose-built for expressing policies over complex hierarchical data structures. For detailed information on Rego see the (Policy Language)[https://www.openpolicyagent.org/docs/latest/policy-language] documentation.
