@@ -154,7 +154,7 @@ When you modify the `dashboard.opa` file, you will need to restart your tyk Dash
 
 ### Using the Open Policy Agent in the Dashboard
 
-As well as configuring OPA rules through the API, admin users can view and edit OPA rules from within the Tyk Dashboard. The advantage of configuring your OPA rules in the Dashboard is that the format is The advantage of configuring your OPA rules in the Dashboard is that you can use a code editor for it, emulating a proper developer experience. There are two ways you can do this:
+As well as configuring OPA rules through the API, admin users can view and edit OPA rules from within the Tyk Dashboard. The advantage of configuring your OPA rules in the Dashboard is that you can use a code editor for it, emulating a proper developer experience. There are two ways you can do this:
 
 1. From the **OPA Rules menu**. From the Dashboard Management menu, select OPA Rules. You can view and make any changes and select whether your OPA rules should be enabled or disabled.
 
