@@ -13,32 +13,27 @@ aliases:
   - /tyk-on-premises/with-kubernetes
 ---
 
-There are two main ways to install Tyk on Kubernetes: Via our Helm chart, or manually.
+There are two main ways to install Tyk on Kubernetes: Via our Helm chart, or using `kubectl`and YAML manifests. Since the manual way has been superseded by our [Helm charts](github.com/tykTechnologies/tyk-helm-chart) and the [Tyk-operator](github.com/tykTechnologies/tyk-operator), we have archived the [tyk-kubernetes](https://github.com/TykTechnologies/tyk-kubernetes) reoritory, that suppored it. At the moment, it is not under development but you are welcomed to try this method and use the YAML manifist of that repo as a starting point.
 
----
 
-## Installing Tyk on Kubernetes Manually
-
-We have an [archived GitHub repo](https://github.com/TykTechnologies/tyk-kubernetes) That details installing Tyk on Kubernetes manually. Feel free to try this method, but it has been superseeded by our Helm Chart and Tyk Operator offering.
 ## Tyk Helm Chart
 
-This is the preferred (and easiest) way to install Tyk Pro on Kubernetes. It will install Tyk as an ingress to your K8s cluster, and then add new APIs to manage via our Tyk Kubernetes Operator,  or as with a normal Tyk Pro Installation managed with a Dashboard Control Plane.
+This is the preferred (and easiest) way to install Tyk Self-managed on Kubernetes. It will install Tyk as an ingress to your K8s cluster, and then add new APIs to manage via Tyk-operator, or as usual, via the Tyk manager.
 
-# Tyk Pro for Kubernetes Helm Chart
+The [chart](https://github.com/TykTechnologies/tyk-helm-chart/tree/master/tyk-pro) installs Tyk manager, management gateway and pump and then bootstrap the environment by creating a new organisation and a Tyk manager user to login.
+If you are installing MDCB, then it will also install the MDCB component into the control plane.
 
-This chart provides a full Tyk Pro Installation (API Management Dashboard and API Gateways with Analytics) for Kubernetes.
-
-For further detail on how to configure Tyk as an Ingress Gateway, or how to manage APIs in Tyk using the Kubernetes API, please refer to our [Tyk Operator documentation](https://github.com/TykTechnologies/tyk-operator/). The operator can be installed along this chart and works with all installation types.
+For detail on how to configure Tyk as an Ingress Gateway, or how to manage APIs in Tyk using the Kubernetes API, please refer to our [Tyk Operator documentation](https://github.com/TykTechnologies/tyk-operator/). The operator can be installed along this chart and works with all installation types.
 
 **Prerequisites**
 
-- Redis installed in the cluster or reachable from inside K8s
-- MongoDB installed in the cluster, or reachable from inside K8s
+- Redis installed in the cluster or reachable from inside Kubernetes
+- MongoDB installed in the cluster, or reachable from inside Kubernetes
 
 {{< note success >}}
 **Note**
   
-MongoDB is not required for either Tyk Open Source or Hybrid Gateways installations.
+MongoDB is not required for Hybrid Gateways installations.
 {{< /note >}}
 
 
@@ -81,14 +76,8 @@ This helm chart enables the `PodDisruptionBudget` for MongoDB with an arbiter re
 {{< /note >}}
 
 
-## Installing the Tyk Open Source Edition
-
-```{copy.Wrapper}
-helm install tyk-ce ./tyk-headless -n tyk
-```
-
-## Install Tyk Pro
-To install, *first modify the `values.yaml` file inside tyk-pro chart to add your license*:
+### Installing Tyk Self-managed
+To install, *first modify the `values.yaml` file inside `tyk-pro` chart to add your license*:
 
 ```{copy.Wrapper}
 helm install tyk-pro ./tyk-pro -n tyk --wait
@@ -97,7 +86,7 @@ helm install tyk-pro ./tyk-pro -n tyk --wait
 {{< note success >}}
 **Note**
   
-When installing the Tyk Pro helm chart the `--wait` argument is important to enable the Tyk Dashboard to bootstrap.
+When installing the Tyk Pro helm chart the `--wait` argument is important to enable the Tyk Manager to bootstrap.
 {{< /note >}}
 
 
@@ -145,7 +134,7 @@ This chart implies there's a ConfigMap with a `profiles.json` definition in it. 
 
 If you are deploying the Master Data Centre then you can enable the addition of that component in your installation. For more details about the MDCB component see [here](https://tyk.io/docs/tyk-multi-data-centre/)
 
-This enables a multicluster, multi Data-Centre API management from a single Tyk Dashboard.
+This enables a multi-cluster, multi Data-Centre API management from a single Tyk Dashboard.
 
 **Secrets**
 
