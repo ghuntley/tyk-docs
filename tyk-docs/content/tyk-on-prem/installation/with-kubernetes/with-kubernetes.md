@@ -13,7 +13,7 @@ aliases:
   - /tyk-on-premises/with-kubernetes
 ---
 
-There are two main ways to install Tyk on Kubernetes: Via our Helm chart, or using `kubectl`and YAML manifests. Since the manual way has been superseded by our [Helm charts](github.com/tykTechnologies/tyk-helm-chart) and the [Tyk-operator](github.com/tykTechnologies/tyk-operator), we have archived the [tyk-kubernetes](https://github.com/TykTechnologies/tyk-kubernetes) reoritory, that suppored it. At the moment, it is not under development but you are welcomed to try this method and use the YAML manifist of that repo as a starting point.
+There are two main ways to install Tyk on Kubernetes: Via our Helm chart, or using `kubectl`and YAML manifests. Since the manual way has been superseded by [Tyk Helm charts](github.com/tykTechnologies/tyk-helm-chart) and the [Tyk-operator](github.com/tykTechnologies/tyk-operator), we have archived the [tyk-kubernetes](https://github.com/TykTechnologies/tyk-kubernetes) reoritory, that suppored it. At the moment, it is not under development but you can still use this method.
 
 
 ## Tyk Helm Chart
