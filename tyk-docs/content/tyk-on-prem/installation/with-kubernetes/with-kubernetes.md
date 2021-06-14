@@ -13,7 +13,7 @@ aliases:
   - /tyk-on-premises/with-kubernetes
 ---
 
-There are two main ways to install Tyk on Kubernetes: Via our Helm chart, or using `kubectl`and YAML manifests. Since the manual way has been superseded by [Tyk Helm charts](github.com/tykTechnologies/tyk-helm-chart) and the [Tyk-operator](github.com/tykTechnologies/tyk-operator), we have archived the [tyk-kubernetes](https://github.com/TykTechnologies/tyk-kubernetes) reoritory, that suppored it. At the moment, it is not under development but you can still use this method.
+There are two main ways to install Tyk on Kubernetes: Via our Helm chart, or using `kubectl`and YAML manifests. Since the manual way has been superseded by [Tyk Helm charts](github.com/tykTechnologies/tyk-helm-chart) and the [Tyk-operator](github.com/tykTechnologies/tyk-operator), we have archived the [tyk-kubernetes](https://github.com/TykTechnologies/tyk-kubernetes) reporitory, that supported it. At the moment, it is not under development but you can still use this method.
 
 
 ## Tyk Helm Chart
@@ -120,11 +120,11 @@ helm install tyk-hybrid ./tyk-hybrid -n tyk
 WIf you are using hybrid gateway with the Tyk Classic Cloud use the rpc settings block commented out in the values yaml.
 {{< /note >}}
 
-## Installing TIB
+## Installing Tyk-Identity-Broker/TIB
 
-TIB is not necessary to install for Pro installations and it's functionality is included in the Tyk Dashboard API Manager.
+For SSO to Tyk manager or to Tyk developer portal, you do not need to install TIB separately as its functionality is now included in the Tyk Manager.
 
-The Tyk Identity Broker (TIB) is a micro-service portal that provides a bridge between various Identity Management Systems such as LDAP, Social OAuth (e.g. GPlus, Twitter, GitHub), legacy Basic Authentication providers, to your Tyk installation (https://tyk.io/docs/getting-started/tyk-components/identity-broker/).
+The Tyk Identity Broker (TIB) is a micro-service portal that provides a bridge between various Identity Management Systems such as LDAP, OIDC providors, legacy Basic Authentication providers, to your Tyk installation (https://tyk.io/docs/getting-started/tyk-components/identity-broker/).
 
 Once you have installed `Gateway` and `Dashboard` component you can configure `tib.conf` and `profile.json`, you can read about how to configure them here https://github.com/TykTechnologies/tyk-identity-broker#how-to-configure-tib, and use helm upgrade command to install TIB.
 
